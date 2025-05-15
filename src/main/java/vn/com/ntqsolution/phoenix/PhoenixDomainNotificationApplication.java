@@ -23,7 +23,7 @@ public class PhoenixDomainNotificationApplication {
 
 
 	public static void main(String[] args) {
-//		SpringApplication.run(PhoenixDomainNotificationApplication.class, args);
+		SpringApplication.run(PhoenixDomainNotificationApplication.class, args);
 //		DomainService domainService = new DomainService();
 //		List<String> s = Arrays.asList("staging.api-server.ringcall-app.com",
 //				"staging.approve.ringcall-app.com",
@@ -50,10 +50,10 @@ public class PhoenixDomainNotificationApplication {
 //		SlackUtil.sendSlackMessage(SLACK_WEBHOOK, "Mobius Server", "Domain service restart");
 //	}
 
-	@PostConstruct
-	private void notifySlack() {
-		SlackUtil.sendSlackMessage(SLACK_WEBHOOK, "Mobius Server", "Domain service restart");
-		domainSchedule.checkAndSendExpiredSSLNotification();
-	}
+	// @PostConstruct
+	// private void notifySlack() {
+	// 	SlackUtil.sendSlackMessage(SLACK_WEBHOOK, "Mobius Server", "Domain service restart");
+	// 	domainSchedule.checkAndSendExpiredSSLNotification();
+	// }
 
 }
